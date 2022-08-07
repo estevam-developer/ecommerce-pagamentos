@@ -11,7 +11,9 @@ Microsserviço destinado a manipulação dos dados de produtos.
   
   Há também uma instância desta aplicação rodando no Heroku, disponibilizada em https://estevam-produtos.herokuapp.com/
   
-  Observar que para o registro de produtos foi utilizado o recurso de multipart/form-data, para envio do JSON com os dados e as imagens em uma mesma requisição. 
+  Observar que para o registro de produtos foi utilizado o recurso de multipart/form-data, para envio do JSON com os dados e as imagens em uma mesma requisição. Desta forma, será necessário anexar os arquivos para o teste.
+
+![img.png](img.png)
 
 ## :hammer: Serviços
 
