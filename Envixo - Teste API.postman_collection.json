@@ -1,0 +1,642 @@
+{
+	"info": {
+		"_postman_id": "62150fa1-d14d-47e3-9392-e676f41c71af",
+		"name": "Envixo - Teste API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8154359"
+	},
+	"item": [
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "1.Create",
+					"item": [
+						{
+							"name": "categoria - Livros",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\":\"Livros\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/categorias",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "categoria - Vestuário",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\":\"Vestuário\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/categorias",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "categoria - Eletrodomésticos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\":\"Eletrodomésticos\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/categorias",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "2.Retrieve",
+					"item": [
+						{
+							"name": "categoria - Listar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/categorias",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "categoria - Busca por ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/categorias/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categorias",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "3.Update",
+					"item": [
+						{
+							"name": "categoria - Eletrodomésticos para Eletroeletrônicos",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Eletroeletrônicos\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/categorias/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categorias",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "categoria - Eletroeletrônicos",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/categorias/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categorias",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "1.Create",
+					"item": [
+						{
+							"name": "produto -  Vestuário - Camisa - Ativo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "data",
+											"value": "{\n    \"titulo\": \"Camisa Social Manga Longa Slim Fit - 100% Algodão\",\n    \"descricao\": \"Camisa de algodão, Tecido de alta durabilidade, Modelagem SLIM (um pouco mais justa que o tradicional), Confecção própria com mais de 25 anos de mercado, Ideal para o dia a dia\",\n    \"status\": \"ATIVO\",\n\t\"preco\": 99.99,\n\t\"precoPromocional\": 85.00,\n    \"tags\": [\n        {\n            \"tag\": \"MODERNA\"\n        },\n        {\n            \"tag\": \"SIMPLES\"\n        }\n    ],\n    \"categoriaId\": 2\n}",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/fontes/images/CAMISA_1.jpg"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/fontes/images/CAMISA_2.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "produto -  Vestuário - Camisa - Rascunho",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "data",
+											"value": "{\n    \"titulo\": \"Camisa Social Manga Longa Slim Fit - 100% Algodão\",\n    \"descricao\": \"Camisa de algodão, Tecido de alta durabilidade, Modelagem SLIM (um pouco mais justa que o tradicional), Confecção própria com mais de 25 anos de mercado, Ideal para o dia a dia\",\n    \"status\": \"RASCUNHO\",\n\t\"preco\": 99.99,\n\t\"precoPromocional\": 85.00,\n    \"tags\": [\n        {\n            \"tag\": \"MODERNA\"\n        },\n        {\n            \"tag\": \"SIMPLES\"\n        }\n    ],\n    \"categoriaId\": 2\n}",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/fontes/images/CAMISA_3.jpg"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/fontes/images/CAMISA_4.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "produto - Livro - Pai Rico... - Ativo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "data",
+											"value": "{\n    \"titulo\": \"Pai Rico, Pai Pobre\",\n    \"descricao\": \"Edição de 20 anos atualizada e ampliada: O que os ricos ensinam a seus filhos sobre dinheiro\",\n    \"status\": \"ATIVO\",\n\t\"preco\": 33.12,\n\t\"precoPromocional\": 30.12,\n    \"tags\": [\n        {\n            \"tag\": \"BEST SELLER\"\n        },\n        {\n            \"tag\": \"TRADUZIDO\"\n        }\n    ],\n    \"categoriaId\": 1\n}",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/fontes/images/LIVRO_1.jpg"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/fontes/images/LIVRO_2.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "produto - Livro - Pai Rico... - Rascunho",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "data",
+											"value": "{\n    \"titulo\": \"Pai Rico, Pai Pobre\",\n    \"descricao\": \"Edição de 20 anos atualizada e ampliada: O que os ricos ensinam a seus filhos sobre dinheiro\",\n    \"status\": \"RASCUNHO\",\n\t\"preco\": 33.12,\n\t\"precoPromocional\": 30.12,\n    \"tags\": [\n        {\n            \"tag\": \"BEST SELLER\"\n        },\n        {\n            \"tag\": \"TRADUZIDO\"\n        }\n    ],\n    \"categoriaId\": 1\n}",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/fontes/images/LIVRO_3.jpg"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/fontes/images/LIVRO_4.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "produto - Livro - O Poder do... - Somente campos obrigatórios",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "data",
+											"value": "{\n    \"titulo\": \"O Poder do Hábito\",\n    \"descricao\": \"Charles Duhigg, repórter investigativo do New York Times, mostra que a chave para o sucesso é entender como os hábitos funcionam - e como podemos transformá-los.\",\n    \"status\": \"RASCUNHO\",\n\t\"preco\": 48.99\n}",
+											"contentType": "application/json",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "2.Retrieve",
+					"item": [
+						{
+							"name": "produto - Busca por ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"Celular Sansung S20\",\r\n    \"descricao\": \"Ultima geração da linha de celulares da marca ...\",\r\n    \"status\": \"ATIVO\",\r\n    \"tags\": [\r\n        {\r\n            \"tag\": \"BONITO\"\r\n        },\r\n        {\r\n            \"tag\": \"BARATO\"\r\n        }\r\n    ],\r\n    \"categoriaId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "produto - Listar - Todos por ordem descendente de Categoria e Status",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"Celular Sansung S20\",\r\n    \"descricao\": \"Ultima geração da linha de celulares da marca ...\",\r\n    \"status\": \"ATIVO\",\r\n    \"tags\": [\r\n        {\r\n            \"tag\": \"BONITO\"\r\n        },\r\n        {\r\n            \"tag\": \"BARATO\"\r\n        }\r\n    ],\r\n    \"categoriaId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos?sort=categoria,desc&sort=status,desc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "categoria,desc"
+										},
+										{
+											"key": "sort",
+											"value": "status,desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "produto - Listar - Todos por ordem ascendente de Categoria s Status",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"Celular Sansung S20\",\r\n    \"descricao\": \"Ultima geração da linha de celulares da marca ...\",\r\n    \"status\": \"ATIVO\",\r\n    \"tags\": [\r\n        {\r\n            \"tag\": \"BONITO\"\r\n        },\r\n        {\r\n            \"tag\": \"BARATO\"\r\n        }\r\n    ],\r\n    \"categoriaId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos?sort=categoria,asc&sort=status,asc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "categoria,asc"
+										},
+										{
+											"key": "sort",
+											"value": "status,asc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "produto - Listar - Ativos com Titulo Contendo \"Pai\"",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"Celular Sansung S20\",\r\n    \"descricao\": \"Ultima geração da linha de celulares da marca ...\",\r\n    \"status\": \"ATIVO\",\r\n    \"tags\": [\r\n        {\r\n            \"tag\": \"BONITO\"\r\n        },\r\n        {\r\n            \"tag\": \"BARATO\"\r\n        }\r\n    ],\r\n    \"categoriaId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos?status=ativo&titulo=pai",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "ativo"
+										},
+										{
+											"key": "titulo",
+											"value": "pai"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "produto - Listar - Titulo Contendo \"rico\" Ordenado por Status Decrescente",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"Celular Sansung S20\",\r\n    \"descricao\": \"Ultima geração da linha de celulares da marca ...\",\r\n    \"status\": \"ATIVO\",\r\n    \"tags\": [\r\n        {\r\n            \"tag\": \"BONITO\"\r\n        },\r\n        {\r\n            \"tag\": \"BARATO\"\r\n        }\r\n    ],\r\n    \"categoriaId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos?titulo=rico&sort=status,desc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos"
+									],
+									"query": [
+										{
+											"key": "titulo",
+											"value": "rico"
+										},
+										{
+											"key": "sort",
+											"value": "status,desc"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "produto - delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"Celular Sansung S20\",\r\n    \"descricao\": \"Ultima geração da linha de celulares da marca ...\",\r\n    \"status\": \"ATIVO\",\r\n    \"tags\": [\r\n        {\r\n            \"tag\": \"BONITO\"\r\n        },\r\n        {\r\n            \"tag\": \"BARATO\"\r\n        }\r\n    ],\r\n    \"categoriaId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
